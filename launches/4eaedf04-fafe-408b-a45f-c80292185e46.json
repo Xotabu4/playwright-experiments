@@ -1,0 +1,135 @@
+{
+  "config": {
+    "forbidOnly": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/projects/playwright-experiments/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "name": "",
+        "testDir": "/home/projects/playwright-experiments",
+        "testIgnore": [],
+        "testMatch": [
+          "**/?(*.)@(spec|test).@(ts|js|mjs)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "rootDir": "/home/projects/playwright-experiments",
+    "quiet": false,
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.16.2",
+    "workers": 12,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "tests/some.test.ts",
+      "file": "tests/some.test.ts",
+      "line": 0,
+      "column": 0,
+      "specs": [
+        {
+          "title": "basic test",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 2172,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "file": "tests/some.test.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "data provider 1",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 0,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "file": "tests/some.test.ts",
+          "line": 10,
+          "column": 3
+        },
+        {
+          "title": "data provider 2",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 0,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "file": "tests/some.test.ts",
+          "line": 10,
+          "column": 3
+        },
+        {
+          "title": "data provider 3",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 0,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "file": "tests/some.test.ts",
+          "line": 10,
+          "column": 3
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

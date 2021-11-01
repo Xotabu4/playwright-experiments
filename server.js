@@ -3,13 +3,19 @@ import { readFile, readdir } from 'fs/promises';
 import express from 'express';
 import crypto from 'crypto'
 
-
 const app = express()
 app.use(express.json());
 const port = 3001
 
-app.get('/tests', async (req, res) => {
+execSync('PLAYWRIGHT_JSON_OUTPUT_NAME=results.json playwright test --list --reporter json')
+
+app.get('/tests/reload', async (req, res) => {
     execSync('PLAYWRIGHT_JSON_OUTPUT_NAME=results.json playwright test --list --reporter json')
+    const json = JSON.parse(await readFile(new URL('./results.json', import.meta.url)));
+    res.send(json)
+})
+
+app.get('/tests', async (req, res) => {
     const json = JSON.parse(await readFile(new URL('./results.json', import.meta.url)));
     res.send(json)
 })
@@ -48,5 +54,5 @@ app.post('/run/async', async (req, res) => {
 
 
 app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
+    console.log(`Playwright test api server listening at http://localhost:${port}`)
 })
