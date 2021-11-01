@@ -1,0 +1,17 @@
+{
+  "name": "protractor-experiments",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test --list --reporter json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@playwright/test": "^1.16.2",
+    "express": "^4.17.1"
+  }
+}
