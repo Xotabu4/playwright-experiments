@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "c435fe1a-07ea-4baa-a018-195f047d761c",
+		"name": "playwright-test-server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Run test async",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"file\": \"tests/some.test.ts\",\r\n    \"grep\": \"basic test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/run/async",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"run",
+						"async"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Run test sync",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"file\": \"tests/*.test.ts\",\r\n    \"grep\": \".*\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/run/sync",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"run",
+						"sync"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tests",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"file\": \"tests/some.test.ts\",\r\n    \"grep\": \"basic test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/tests",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"tests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tests reload",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"file\": \"tests/some.test.ts\",\r\n    \"grep\": \"basic test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/tests",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"tests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Launches",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/launches",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"launches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Launch",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/launch/1bc90d73-cd2c-49ac-a479-22dfc69feaf9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"launch",
+						"1bc90d73-cd2c-49ac-a479-22dfc69feaf9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
